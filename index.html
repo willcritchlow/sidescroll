@@ -1,0 +1,27 @@
+<html>
+
+	<head>
+		<title>Sideways scrolling test</title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.mousewheel.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script>
+			$(function() {
+				$("body").mousewheel(function(event, delta) {
+					this.scrollLeft -= (delta * 30);
+					event.preventDefault();
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="wide">&nbsp;
+			<h1>Long horizontal infographic goes here ---------------------------------------------------------------------------------------></h1>
+ 			<p>and copy encourages people to scroll down with their mouse-wheel which should go sideways ------></p>
+			<p>The idea would be that we would create an infographic that worked naturally as a long story.</p>
+		</div>
+		<p class="tall">&nbsp;</p>
+	</body>
+
+</html>
